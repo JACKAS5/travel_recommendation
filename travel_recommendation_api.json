@@ -1,0 +1,29 @@
+
+{
+	"cities": [
+		{
+			"city": "Toronto",
+			"country": "Canada",
+			"timezone": "America/Toronto",
+			"image": "https://images.unsplash.com/photo-1505765058573-5f7633b1a5f7?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=89a1e3ec4790b5b472d0b7a9a8c0cf79",
+			"description": "A diverse and cosmopolitan city, Toronto is known for its iconic CN Tower, cultural events, and diverse neighborhoods.",
+			"url": "https://en.wikipedia.org/wiki/Toronto"
+		},
+		{
+			"city": "Vancouver",
+			"country": "Canada",
+			"timezone": "America/Vancouver",
+			"image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=8b6e03d2e9f69f42f3f64b7f0fda3a1b",
+			"description": "Vancouver is a coastal city surrounded by mountains and known for its outdoor lifestyle and scenic beauty.",
+			"url": "https://en.wikipedia.org/wiki/Vancouver"
+		},
+		{
+			"city": "Paris",
+			"country": "France",
+			"timezone": "Europe/Paris",
+			"image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b4f1b0d50ba7f6aee1c2c2f77d3d27b",
+			"description": "Paris is famed for its art, fashion, gastronomy and culture, with landmarks like the Eiffel Tower and Louvre Museum.",
+			"url": "https://en.wikipedia.org/wiki/Paris"
+		}
+	]
+}

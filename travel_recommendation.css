@@ -1,0 +1,298 @@
+/* Basic reset and container */
+:root {
+    --teal: #0f6b67;
+    --teal-dark: #0b5250;
+    --card-bg: #ffffff;
+    --muted: #9aa3a6;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, Segoe UI, system-ui, Arial, sans-serif;
+    color: #fff
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+/* Header */
+.site-header {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35));
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 60
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-link{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none}
+.logo-icon{width:36px;height:36px;color:#fff}
+.brand{font-weight:700;font-size:18px}
+.menu-toggle{display:none;background:transparent;border:none;color:#fff;font-size:20px;cursor:pointer}
+
+.main-nav a {
+    color: #fff;
+    margin: 0 12px;
+    text-decoration: none
+}
+
+.search-wrap {
+    display: flex;
+    gap: 8px
+}
+
+.search-wrap input {
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: none;
+    min-width: 220px
+}
+
+.search-wrap button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background: var(--teal);
+    color: #fff;
+    cursor: pointer
+}
+
+.search-wrap .clear {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15)
+}
+
+/* Hero */
+.hero {
+    height: 640px;
+    background-image: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b57b9c9733d6adf8a7ea89b4b2a9f6b');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 88px
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(6, 44, 46, 0.85) 0%, rgba(6, 44, 46, 0.55) 40%, rgba(0, 0, 0, 0.15) 100%)
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+    align-items: center;
+    position: relative
+}
+
+.hero-left {
+    padding: 60px 0
+}
+
+.hero-title {
+    font-size: 84px;
+    line-height: 0.9;
+    margin: 0 0 20px;
+    font-weight: 800
+}
+
+.hero-desc {
+    max-width: 420px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none
+}
+
+.btn.primary {
+    background: var(--teal);
+    color: #fff
+}
+
+/* Right card */
+.hero-card {
+    background: transparent;
+    position: relative;
+    margin-top: 10px
+}
+
+.time-badge {
+    position: absolute;
+    right: 8px;
+    top: -36px;
+    background: var(--teal);
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    z-index: 10
+}
+
+.card-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 10px 30px rgba(2, 10, 10, 0.4)
+}
+
+.card-content {
+    background: var(--card-bg);
+    color: #222;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 30px rgba(2, 10, 10, 0.2)
+}
+
+.card-content h3 {
+    margin: 0 0 8px
+}
+
+.card-content p {
+    color: var(--muted);
+    margin: 0 0 14px
+}
+
+.card-content .btn {
+    background: var(--teal-dark);
+    color: #fff
+}
+
+.social-left {
+    position: fixed;
+    left: 16px;
+    top: 220px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 50
+}
+
+.social-left a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(0,0,0,0.25)
+}
+
+.social-left svg{width:18px;height:18px}
+
+/* Small screens */
+@media (max-width:900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        padding: 24px 0;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .hero-title {
+        font-size: 48px
+    }
+
+    .hero {
+        height: auto;
+        padding-bottom: 24px
+    }
+
+    .time-badge {
+        right: 20px
+    }
+
+}
+
+/* Hide header search on small screens - moved into mobile menu */
+@media (max-width:520px){
+    .search-wrap{display:none}
+}
+
+/* Mobile search inside nav */
+.mobile-nav-inner{padding:18px 20px 28px}
+.mobile-search{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.mobile-search input{padding:10px;border-radius:12px;border:none}
+.mobile-search-actions{display:flex;gap:8px}
+.mobile-search-actions .btn{flex:1}
+.mobile-social{margin-top:14px;display:flex;gap:10px}
+.mobile-social a{color:#fff;text-decoration:none;padding:8px 10px;background:rgba(255,255,255,0.06);border-radius:8px}
+
+/* align mobile nav inner to match header/container padding */
+.mobile-nav{padding-left:20px;padding-right:20px}
+
+/* Mobile nav panel and backdrop */
+.mobile-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:120;opacity:0;transition:opacity .22s ease}
+.mobile-backdrop[hidden]{display:none}
+.mobile-nav{position:fixed;top:0;left:0;right:0;transform:translateY(-110%);background:linear-gradient(180deg,#06302f,#0a4b48);color:#fff;z-index:130;padding:20px 18px;box-shadow:0 10px 30px rgba(0,0,0,0.4);transition:transform .28s cubic-bezier(.2,.9,.2,1)}
+.mobile-nav.open{transform:translateY(0)}
+.mobile-nav .mobile-close{background:transparent;border:none;color:#fff;font-size:24px;position:absolute;right:12px;top:10px;cursor:pointer}
+.mobile-nav ul{list-style:none;padding:50px 0 20px;margin:0;display:flex;flex-direction:column;gap:14px}
+.mobile-nav a{color:#fff;text-decoration:none;font-size:18px;padding:10px 6px;border-radius:8px}
+
+/* show backdrop when open by toggling hidden attr in JS */
+.mobile-nav.open + .mobile-backdrop{opacity:1}
+
+/* prevent body scroll when nav open */
+body.lock-scroll{height:100%;overflow:hidden}
+
+@media (max-width:520px) {
+    .search-wrap input {
+        min-width: 120px
+    }
+
+    /* switch header to mobile: hide main nav, show hamburger */
+    .main-nav{display:none}
+    .menu-toggle{display:block}
+
+    .card-image {
+        height: 160px
+    }
+
+    .hero-title {
+        font-size: 36px
+    }
+
+    .brand{display:none}
+    .logo-icon{width:28px;height:28px}
+    .social-left{left:8px;top:180px}
+}
+
+/* ensure hero-card becomes full-width and stacked under text */
+.hero-card{width:100%;max-width:420px}
+.hero-grid > .hero-left{order:0}
+.hero-grid > .hero-card{order:1}
+
+/* Utility */
+body a.btn:hover {
+    opacity: 0.95
+}
