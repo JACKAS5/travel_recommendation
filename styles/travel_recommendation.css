@@ -4,6 +4,9 @@
     --teal-dark: #0b5250;
     --card-bg: #ffffff;
     --muted: #9aa3a6;
+    --max-content-width: 1200px;
+    --container-pad: 20px;
+    --header-height: 68px;
 }
 
 * {
@@ -28,6 +31,8 @@ html, body {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35));
     position: fixed;
     left: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     right: 0;
     top: 0;
     z-index: 60
@@ -40,23 +45,55 @@ html, body {
     height: 68px
 }
 
-.logo {
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    display:flex;
-    align-items:center;
-    gap:10px;
+.main-nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 
-.logo-link{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none}
-.logo-icon{width:36px;height:36px;color:#fff}
-.brand{font-weight:700;font-size:18px}
-.menu-toggle{display:none;background:transparent;border:none;color:#fff;font-size:20px;cursor:pointer}
+.logo {
+    height: var(--header-height);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    text-decoration: none
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    color: #fff
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 18px
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
 
 .main-nav a {
     color: #fff;
+    font-size: 15px;
+    line-height: 1.2;
     margin: 0 12px;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .search-wrap {
@@ -77,7 +114,9 @@ html, body {
     border: none;
     background: var(--teal);
     color: #fff;
-    cursor: pointer
+    cursor: pointer;
+    width: 100%;
+    aspect-ratio: 16/9;
 }
 
 .search-wrap .clear {
@@ -97,16 +136,19 @@ html, body {
 
 .hero-overlay {
     position: absolute;
+    left: var(--container-pad);
+    top: calc(var(--header-height) + 120px);
     inset: 0;
     background: linear-gradient(90deg, rgba(6, 44, 46, 0.85) 0%, rgba(6, 44, 46, 0.55) 40%, rgba(0, 0, 0, 0.15) 100%)
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 420px;
-    gap: 28px;
+    grid-template-columns: 1fr min(420px, 36%);
+    gap: clamp(18px, 2.5vw, 36px);
     align-items: center;
-    position: relative
+    /* vertically center text and card */
+    position: relative;
 }
 
 .hero-left {
@@ -204,18 +246,27 @@ html, body {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
-    display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px;background:rgba(0,0,0,0.25)
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.25)
 }
 
-.social-left svg{width:18px;height:18px}
+.social-left svg {
+    width: 18px;
+    height: 18px
+}
 
 /* Small screens */
 @media (max-width:900px) {
     .hero-grid {
         grid-template-columns: 1fr;
         padding: 24px 0;
-        padding-left:20px;
-        padding-right:20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .hero-title {
@@ -234,36 +285,129 @@ html, body {
 }
 
 /* Hide header search on small screens - moved into mobile menu */
-@media (max-width:520px){
-    .search-wrap{display:none}
+@media (max-width:520px) {
+    .search-wrap {
+        display: none
+    }
 }
 
 /* Mobile search inside nav */
-.mobile-nav-inner{padding:18px 20px 28px}
-.mobile-search{display:flex;flex-direction:column;gap:10px;margin-top:10px}
-.mobile-search input{padding:10px;border-radius:12px;border:none}
-.mobile-search-actions{display:flex;gap:8px}
-.mobile-search-actions .btn{flex:1}
-.mobile-social{margin-top:14px;display:flex;gap:10px}
-.mobile-social a{color:#fff;text-decoration:none;padding:8px 10px;background:rgba(255,255,255,0.06);border-radius:8px}
+.mobile-nav-inner {
+    padding: 18px 20px 28px
+}
+
+.mobile-search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px
+}
+
+.mobile-search input {
+    padding: 10px;
+    border-radius: 12px;
+    border: none
+}
+
+.mobile-search-actions {
+    display: flex;
+    gap: 8px
+}
+
+.mobile-search-actions .btn {
+    flex: 1
+}
+
+.mobile-social {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px
+}
+
+.mobile-social a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px
+}
 
 /* align mobile nav inner to match header/container padding */
-.mobile-nav{padding-left:20px;padding-right:20px}
+.mobile-nav {
+    padding-left: 20px;
+    padding-right: 20px
+}
 
 /* Mobile nav panel and backdrop */
-.mobile-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:120;opacity:0;transition:opacity .22s ease}
-.mobile-backdrop[hidden]{display:none}
-.mobile-nav{position:fixed;top:0;left:0;right:0;transform:translateY(-110%);background:linear-gradient(180deg,#06302f,#0a4b48);color:#fff;z-index:130;padding:20px 18px;box-shadow:0 10px 30px rgba(0,0,0,0.4);transition:transform .28s cubic-bezier(.2,.9,.2,1)}
-.mobile-nav.open{transform:translateY(0)}
-.mobile-nav .mobile-close{background:transparent;border:none;color:#fff;font-size:24px;position:absolute;right:12px;top:10px;cursor:pointer}
-.mobile-nav ul{list-style:none;padding:50px 0 20px;margin:0;display:flex;flex-direction:column;gap:14px}
-.mobile-nav a{color:#fff;text-decoration:none;font-size:18px;padding:10px 6px;border-radius:8px}
+.mobile-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 120;
+    opacity: 0;
+    transition: opacity .22s ease
+}
+
+.mobile-backdrop[hidden] {
+    display: none
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-110%);
+    background: linear-gradient(180deg, #06302f, #0a4b48);
+    color: #fff;
+    z-index: 130;
+    padding: 20px 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform .28s cubic-bezier(.2, .9, .2, 1)
+}
+
+.mobile-nav.open {
+    transform: translateY(0)
+}
+
+.mobile-nav .mobile-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    cursor: pointer
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 50px 0 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.mobile-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 6px;
+    border-radius: 8px
+}
 
 /* show backdrop when open by toggling hidden attr in JS */
-.mobile-nav.open + .mobile-backdrop{opacity:1}
+.mobile-nav.open+.mobile-backdrop {
+    opacity: 1
+}
 
 /* prevent body scroll when nav open */
-body.lock-scroll{height:100%;overflow:hidden}
+body.lock-scroll {
+    height: 100%;
+    overflow: hidden
+}
 
 @media (max-width:520px) {
     .search-wrap input {
@@ -271,8 +415,21 @@ body.lock-scroll{height:100%;overflow:hidden}
     }
 
     /* switch header to mobile: hide main nav, show hamburger */
-    .main-nav{display:none}
-    .menu-toggle{display:block}
+    .main-nav {
+        display: none
+    }
+
+    .menu-toggle {
+        display: block
+    }
+
+    /* on very small screens switch hero to flex column for flexible stacking */
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
 
     .card-image {
         height: 160px
@@ -282,15 +439,45 @@ body.lock-scroll{height:100%;overflow:hidden}
         font-size: 36px
     }
 
-    .brand{display:none}
-    .logo-icon{width:28px;height:28px}
-    .social-left{left:8px;top:180px}
+    .brand {
+        display: none
+    }
+
+    .logo-icon {
+        width: 28px;
+        height: 28px
+    }
+
+    .social-left {
+        left: 8px;
+        top: 180px;
+        display: none;
+        /* hide floating social icons on small screens; icons included in mobile menu */
+    }
+}
+
+@media (max-width:860px) {
+    .main-nav {
+        display: none
+    }
+    .menu-toggle {
+        display: block
+    }
 }
 
 /* ensure hero-card becomes full-width and stacked under text */
-.hero-card{width:100%;max-width:420px}
-.hero-grid > .hero-left{order:0}
-.hero-grid > .hero-card{order:1}
+.hero-card {
+    width: 100%;
+    max-width: 420px
+}
+
+.hero-grid>.hero-left {
+    order: 0
+}
+
+.hero-grid>.hero-card {
+    order: 1
+}
 
 /* Utility */
 body a.btn:hover {

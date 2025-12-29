@@ -1,0 +1,50 @@
+/* booking.css */
+main.booking-page {
+  background-color: #f2f7f7;
+  color: #222;
+  font-family: Inter, Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+main.booking-page .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main.booking-page h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #0f6b67;
+}
+
+main.booking-page p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+main.booking-page .booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main.booking-page .booking-form label {
+  font-weight: 600;
+}
+
+main.booking-page .booking-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+main.booking-page .btn.primary {
+  background-color: #0f6b67;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

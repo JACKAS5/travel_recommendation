@@ -1,0 +1,32 @@
+/* about.css */
+main.about-page {
+  background-color: #e9f0f0;
+  color: #222;
+  font-family: Inter, Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+main.about-page .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main.about-page h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #0f6b67;
+}
+
+main.about-page h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: #0b5250;
+}
+
+main.about-page p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}

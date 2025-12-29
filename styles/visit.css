@@ -1,0 +1,50 @@
+/* visit.css */
+
+/* Container for the visit hero */
+.visit-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f7f7f7;
+  min-height: 80vh;
+}
+
+/* Image styling */
+.visit-hero img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  object-fit: cover;
+}
+
+/* Title styling */
+.visit-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #065609;
+  margin-bottom: 1rem;
+}
+
+/* Description styling */
+.visit-hero p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  max-width: 800px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .visit-hero h1 {
+    font-size: 2rem;
+  }
+
+  .visit-hero p {
+    font-size: 1rem;
+  }
+}
