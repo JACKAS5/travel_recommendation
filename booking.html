@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TravelBloom — Explore</title>
-    <link rel="stylesheet" href="/styles/travel_recommendation.css" />
-  </head>
-  <body>
-    <header class="site-header">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelBloom — Booking</title>
+  <link rel="stylesheet" href="/styles/travel_recommendation.css" />
+  <link rel="stylesheet" href="/styles/booking.css" />
+</head>
+<body>
+  <!-- Header same as base -->
+  <header class="site-header">
       <div class="container header-inner">
         <div class="logo" aria-label="TravelBloom logo">
           <!-- simple plan/plane SVG logo + brand text -->
@@ -123,108 +125,26 @@
     </nav>
     <div id="mobileBackdrop" class="mobile-backdrop" hidden></div>
 
-    <main>
-      <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-grid">
-          <div class="hero-left">
-            <h1 class="hero-title">EXPLORE<br />DREAM<br />DESTINATION</h1>
-            <p class="hero-desc">
-              It encourages exploration of unfamiliar territories, embracing
-              diverse cultures and landscapes, while pursuing the desired
-              destination that captivates the heart and ignites a sense of
-              wonder.
-            </p>
-            <a class="btn primary" href="./booking.html">BOOK NOW</a>
-            <a class="btn primary" href="./destination.html">EXPLORE MORE </a>
-          </div>
+  <main class="booking-page" style="padding-top: 100px;">
+    <section class="container">
+      <h1>Book Your Trip</h1>
+      <p>Choose your destination and preferred dates to start planning your dream journey.</p>
 
-          <aside class="hero-card" id="destinationCard">
-            <div class="time-badge" id="timeBadge">
-              Current Local Time: --:--:--
-            </div>
-            <div class="card-image" id="cardImage"></div>
-            <div class="card-content">
-              <h3 id="cardTitle">City, Country</h3>
-              <p id="cardDescription">Description will appear here.</p>
-              <a id="visitBtn" class="btn" href="./destination.html">Visit</a>
-            </div>
-          </aside>
-        </div>
-      </section>
+      <form class="booking-form">
+        <label for="destination">Destination</label>
+        <input type="text" id="destination" placeholder="City or Country" />
 
-      <section class="below-hero container">
-        <h2>Let's now look at</h2>
-      </section>
-    </main>
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" />
 
-    <ul class="social-left" aria-hidden="false">
-      <li>
-        <a href="#" aria-label="Twitter">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22 5.92c-.63.28-1.3.47-2 .56.72-.43 1.27-1.12 1.53-1.94-.67.4-1.41.69-2.2.85A3.48 3.48 0 0016.15 4c-1.92 0-3.48 1.56-3.48 3.48 0 .27.03.53.09.78-2.89-.15-5.46-1.53-7.18-3.64-.3.52-.47 1.12-.47 1.76 0 1.21.62 2.28 1.57 2.91-.58-.02-1.13-.18-1.61-.44v.04c0 1.7 1.21 3.12 2.82 3.44-.3.08-.62.12-.95.12-.23 0-.45-.02-.67-.06.45 1.4 1.76 2.42 3.31 2.45A6.98 6.98 0 012 19.54 9.86 9.86 0 006.29 21c7.55 0 11.68-6.26 11.68-11.68v-.53c.8-.58 1.5-1.3 2.05-2.13-.73.33-1.52.55-2.34.65z"
-              fill="currentColor"
-            />
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" aria-label="Facebook">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.12 8.44 9.95v-7.05H7.9v-2.9h2.54V9.41c0-2.5 1.5-3.88 3.78-3.88 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.77-1.64 1.56v1.88h2.8l-.45 2.9h-2.35v7.05C18.34 21.19 22 17.06 22 12.07z"
-              fill="currentColor"
-            />
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" aria-label="Instagram">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.6A4.4 4.4 0 1016.4 13 4.4 4.4 0 0012 8.6zM18.5 6a1.1 1.1 0 11-1.1-1.1A1.1 1.1 0 0118.5 6z"
-              fill="currentColor"
-            />
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" aria-label="YouTube">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.5 6.2s-.2-1.6-.8-2.3c-.8-1-1.7-1-2.1-1.1C16.4 2.5 12 2.5 12 2.5h-.1S7.6 2.5 3.5 2.8c-.4 0-1.3.1-2.1 1.1C.9 4.6.7 6.2.7 6.2S.5 8 .5 9.8v.4C.5 12 1 13.8 1 13.8s.2 1.6.8 2.3c.8 1 1.8 1 2.3 1.1 1.7.1 7.1.3 7.1.3s4.4 0 8.6-.3c.4 0 1.3-.1 2.1-1.1.6-.7.8-2.3.8-2.3s.5-1.9.5-3.6v-.4c0-1.9-.5-3.6-.5-3.6zM9.8 14.5v-5l5 2.5-5 2.5z"
-              fill="currentColor"
-            />
-          </svg>
-        </a>
-      </li>
-    </ul>
+        <label for="guests">Number of Guests</label>
+        <input type="number" id="guests" min="1" max="10" value="1" />
 
-    <script src="travel_recommendation.js"></script>
-  </body>
+        <button class="btn primary" type="submit">Book Now</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="travel_recommendation.js"></script>
+</body>
 </html>

@@ -1,29 +1,80 @@
-
 {
-	"cities": [
-		{
-			"city": "Toronto",
-			"country": "Canada",
-			"timezone": "America/Toronto",
-			"image": "https://images.unsplash.com/photo-1505765058573-5f7633b1a5f7?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=89a1e3ec4790b5b472d0b7a9a8c0cf79",
-			"description": "A diverse and cosmopolitan city, Toronto is known for its iconic CN Tower, cultural events, and diverse neighborhoods.",
-			"url": "https://en.wikipedia.org/wiki/Toronto"
-		},
-		{
-			"city": "Vancouver",
-			"country": "Canada",
-			"timezone": "America/Vancouver",
-			"image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=8b6e03d2e9f69f42f3f64b7f0fda3a1b",
-			"description": "Vancouver is a coastal city surrounded by mountains and known for its outdoor lifestyle and scenic beauty.",
-			"url": "https://en.wikipedia.org/wiki/Vancouver"
-		},
-		{
-			"city": "Paris",
-			"country": "France",
-			"timezone": "Europe/Paris",
-			"image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b4f1b0d50ba7f6aee1c2c2f77d3d27b",
-			"description": "Paris is famed for its art, fashion, gastronomy and culture, with landmarks like the Eiffel Tower and Louvre Museum.",
-			"url": "https://en.wikipedia.org/wiki/Paris"
-		}
-	]
+  "countries": [
+    {
+      "id": 1,
+      "name": "Australia",
+      "cities": [
+        {
+          "name": "Sydney, Australia",
+          "imageUrl": "https://media.gettyimages.com/id/504539120/photo/sydney-waterfront-at-night.webp?s=1024x1024&w=gi&k=20&c=qZHox6kUxbb-VNugLOJxHQl68oPNiyH7wz4SpNgnftE=",
+          "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+        },
+        {
+          "name": "Melbourne, Australia",
+          "imageUrl": "https://media.gettyimages.com/id/524063856/photo/melbourne-at-dusk.jpg?s=1024x1024&w=gi&k=20&c=MZcigvj-Z0E9ttbVBcpWnZjZRC9Ge6dvTtQBDug3azA=",
+          "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Japan",
+      "cities": [
+        {
+          "name": "Tokyo, Japan",
+          "imageUrl": "https://media.gettyimages.com/id/1663437260/photo/tokyo-skyline-at-night.webp?s=1024x1024&w=gi&k=20&c=WPHzPdspHArwkq5LQkWq5e62idSkSUr4eNUOYlE4Ldk=",
+          "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+        },
+        {
+          "name": "Kyoto, Japan",
+          "imageUrl": "https://media.gettyimages.com/id/1149107495/photo/yasaka-pagoda-in-gion-at-sunset-kyoto-japan.webp?s=1024x1024&w=gi&k=20&c=j_TpjdB2mbOP-XFLF4TW__ozMKWZAmSnuhZHsNlpPnY=",
+          "description": "Known for its historic temples, gardens, and traditional tea houses."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Brazil",
+      "cities": [
+        {
+          "name": "Rio de Janeiro, Brazil",
+          "imageUrl": "https://media.gettyimages.com/id/458295627/photo/aerial-view-of-rio-de-janeiro-landmarks.webp?s=1024x1024&w=gi&k=20&c=aDvWBafOx_3MVKDxiuuvz0Xpgwj2UpMwihNqf1eNaMg=",
+          "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+        },
+        {
+          "name": "São Paulo, Brazil",
+          "imageUrl": "https://media.gettyimages.com/id/157740252/photo/famous-cable-stayed-bridge-at-sao-paulo-city.jpg?s=1024x1024&w=gi&k=20&c=is89Yy0WEHuN-8ozqqxiDT4G06OxImfr15ubKHBqWLo=",
+          "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+        }
+      ]
+    }
+  ],
+  "temples": [
+    {
+      "id": 1,
+      "name": "Angkor Wat, Cambodia",
+      "imageUrl": "https://media.gettyimages.com/id/502325314/photo/the-temple-of-angkor-wat-in-cambodia.webp?s=1024x1024&w=gi&k=20&c=cJBnRfOPWN_zsZDGY3Q5qSIYJlSOg6W_DYE8Sd8vVjU=",
+      "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+    },
+    {
+      "id": 2,
+      "name": "Taj Mahal, India",
+      "imageUrl": "https://media.gettyimages.com/id/873536102/photo/taj-mahal-agra-city-india.webp?s=1024x1024&w=gi&k=20&c=3-0YTe16kDX7uW0i81HMAyoIbYbM4b_ybV7AMKFcAO0=",
+      "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+    }
+  ],
+  "beaches": [
+    {
+      "id": 1,
+      "name": "Bora Bora, French Polynesia",
+      "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop",
+      "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+    },
+    {
+      "id": 2,
+      "name": "Copacabana Beach, Brazil",
+      "imageUrl": "https://media.gettyimages.com/id/958192898/photo/a-sunday-at-copacabana-beach.jpg?s=2048x2048&w=gi&k=20&c=Fpeo2nrvUP8WCuSVZ3xoIXaJsc6Iesio_1CzlHGobOg=",
+      "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+    }
+  ]
 }
